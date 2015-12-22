@@ -1,9 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  balance: 9.99
+  balance: 20
   name: MyString
 
 two:
-  balance: 9.99
+  balance: 20
   name: MyString
+
+<% 100.times do |i| %>
+money_<%= i %>:
+  balance: <%= rand(10000)/100.0 %>
+  name: Money <%= i %>
+<% end %>
