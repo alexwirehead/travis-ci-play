@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Money.delete_all
+moneys = [{balance: 20, name: "andystabler"},
+         {balance: -4, name: "fionabarron"}]
+Money.create!(moneys)
