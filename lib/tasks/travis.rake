@@ -4,14 +4,14 @@ namespace :travis do
   task :migrate do
     puts "migrating db . . ."
     `bundle exec db:migrate`
+    puts "finished migrating db . . ."
   end
 
   desc "Runs all tests"
-  task :test do
+  task :test => [:migrate] do
     puts "Running tests . . ."
     `bundle exec rake test`
+    puts "finished running tests"
   end
 
 end
-
-Rake::Task['travis:test'].enhance ['travis:migrate']
