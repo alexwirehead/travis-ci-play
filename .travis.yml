@@ -4,5 +4,5 @@ rvm:
 env:
   - RAILS_ENV=test
 script:
-  - bundle exec db:migrate
-  - bundle exec travis:test
+  - bundle exec rake db:migrate
+  - bundle exec rake travis:test
